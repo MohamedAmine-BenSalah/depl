@@ -25,9 +25,10 @@ const Footer = () => {
   const isFLclear = useSelector((state) => state.pageReducer.firstObjLine);
   const isSLclear = useSelector((state) => state.pageReducer.secondObjLine);
   const isTLClear = useSelector((state) => state.pageReducer.thirdObjLine);
+  const timer = useSelector((state) => state.pageReducer.timer);
 
   return (
-    <div className="Footer_Container">
+    <div className={timer ? "Footer_Container_video" : "Footer_Container"}>
       <div className="icon">
         <span className="list">
           <SelfImprovementOutlinedIcon
@@ -39,6 +40,7 @@ const Footer = () => {
               dispatch(setObj(true));
               dispatch(setScene(false));
               dispatch(setTimer(false));
+              dispatch(setFullScreen(false));
             }}
           />
           <span className="listaction">
@@ -56,6 +58,7 @@ const Footer = () => {
               dispatch(setObj(false));
               dispatch(setTimer(false));
               dispatch(setScene(true));
+              dispatch(setFullScreen(false));
             }}
           />
           <span className="listaction">
@@ -74,6 +77,7 @@ const Footer = () => {
               dispatch(setScene(false));
               dispatch(setObj(false));
               dispatch(setTimer(true));
+              dispatch(setFullScreen(false));
             }}
           />
           <span className="listaction">
@@ -91,12 +95,11 @@ const Footer = () => {
             height: "45px",
             marginBottom: "5px",
           }}
-        >
-          onClick=
-          {() => {
+          onClick={() => {
             dispatch(setFullScreen(true));
           }}
-          COMMENCER
+        >
+          COMMECER
         </Button>
       </div>
     </div>

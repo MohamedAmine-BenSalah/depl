@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import HttpsIcon from "@mui/icons-material/Https";
 import { useSelector } from "react-redux";
 const Duree = () => {
   const isFiveVisible = useSelector((state) => state.pageReducer.fiveTimer);
@@ -48,10 +49,19 @@ const Duree = () => {
         <p>Combien de temps souhaitez-vous que votre séance dure ?</p>
         <div className="duree-items">
           <div onClick={() => setisFive(false)} className="item">
-            2 <span>minutes</span>
+            2 <span className="duree-span">minutes</span>
+            <HttpsIcon
+              sx={{
+                height: "10px",
+                width: "10px",
+                position: "absolute",
+                rigth: "18px",
+                top: "17px",
+              }}
+            />
           </div>
           <div onClick={() => setisFive(true)} className="item">
-            5<span>minutes</span>
+            5<span className="duree-span">minutes</span>
           </div>
           <div className="timer">
             {isONVidoe

@@ -15,11 +15,15 @@ function App() {
       <div className="container">
         <Header />
         {/* // lazem hedhom yethatou fi div    */}
-        <VideoContainer />
-        <div>{isVisible ? <ObjectifCarsousel /> : null}</div>
-        <div>{isSceneVisible ? <SceneCarsousel /> : null}</div>
-        <div>{isDurationVisible ? <Duree /> : null}</div>
-        <Foote />
+        <div className="main-page">
+          <VideoContainer />
+          <div className="page-items">
+            <div>{isDurationVisible ? <Duree /> : null}</div>
+            <div>{isVisible ? <ObjectifCarsousel /> : null}</div>
+            <div>{isSceneVisible ? <SceneCarsousel /> : null}</div>
+            <Foote />
+          </div>
+        </div>
       </div>
     </div>
   );

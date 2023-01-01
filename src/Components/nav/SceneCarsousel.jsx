@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import image1 from "./sceneImages/image1.jpg";
 import image2 from "./sceneImages/image2.jpg";
 import image3 from "./sceneImages/image3.jpg";
@@ -8,14 +8,17 @@ import image5 from "./sceneImages/image5.jpg";
 import image6 from "./sceneImages/img6.png";
 import image7 from "./sceneImages/f.png";
 import image8 from "./sceneImages/d.png";
-
+import { setSceneV } from "../Redux/action";
 import "../../App.css";
 import { setSecondScene } from "../Redux/action";
 
 const SceneCarsousel = () => {
   const dispatch = useDispatch();
+  const isFirstScene = useSelector((state) => state.pageReducer.firstScene);
+
   const [isSelected, setIsSelected] = useState(false);
   const [isSelectedSecond, setisSelectedSecond] = useState(false);
+  console.log(isFirstScene);
 
   return (
     <div className="content">
@@ -25,6 +28,7 @@ const SceneCarsousel = () => {
           style={isSelected ? { border: "3.5px solid black" } : null}
           onClick={() => {
             dispatch(setSecondScene(false));
+            dispatch(setSceneV(false));
             setIsSelected(true);
             setisSelectedSecond(false);
           }}
@@ -34,6 +38,7 @@ const SceneCarsousel = () => {
           style={isSelectedSecond ? { border: "3.5px solid black" } : null}
           onClick={() => {
             dispatch(setSecondScene(true));
+            dispatch(setSceneV(true));
             setisSelectedSecond(true);
             setIsSelected(false);
           }}
