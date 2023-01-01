@@ -44,13 +44,12 @@ const SceneCarsousel = () => {
           }}
           src={image8}
         />
-        <img style={{ filter: "brightness(20%)" }} src={image1} />
-        <img style={{ filter: "brightness(20%)" }} src={image4} />
-        <img style={{ filter: "brightness(20%)" }} src={image5} />
-        <img style={{ filter: "brightness(20%)" }} src={image3} />
-        <img style={{ filter: "brightness(20%)" }} src={image4} />
-        <img style={{ filter: "brightness(20%)" }} src={image5} />
-        <img style={{ filter: "brightness(20%)" }} src={image3} />
+        <img  src={image1} />
+        <img  src={image4} />
+        <img  src={image5} />
+        <img  src={image3} />
+        <img  src={image5} />
+        <img  src={image3} />
       </div>
     </div>
   );
