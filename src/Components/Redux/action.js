@@ -12,7 +12,13 @@ export const setSecondObj = () => async (dispatch) => {
     type: TYPES.SET_SECOND_OBJ,
     payload: true,
   });
-};
+}
+export const setSceneV = (payload) => async(dispatch) =>{
+  dispatch({
+    type:TYPES.SET_FIRST_SCENE,
+    payload:payload
+  })
+}
 
 export const setThirdObj = () => async (dispatch) => {
   dispatch({
@@ -66,6 +72,12 @@ export const setFullScreen = (payload) => async (dispatch) => {
     type: TYPES.SET_FULLSCREEN,
     payload: payload,
   });
+  // setTimeout(() => {
+  //   dispatch({
+  //     type: TYPES.SET_FULLSCREEN,
+  //     payload: false,
+  //   });
+  // }, 500);
 };
 export const setFiver = (payload) => async (dispatch) => {
   dispatch({

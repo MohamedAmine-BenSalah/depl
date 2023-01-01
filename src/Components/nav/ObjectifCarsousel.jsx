@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "../../App.css";
-
+import HttpsIcon from "@mui/icons-material/Https";
 const ObjectifCarsousel = () => {
   const [clicked, setClicked] = useState(false);
   const [secondObjClicked, setsecondObjClicked] = useState(false);
@@ -46,10 +46,37 @@ const ObjectifCarsousel = () => {
           }}
           className={secondObjClicked ? "item_click" : "item"}
         >
-          Ecouter la nature (pas de guide)
+          Ecouter la nature
         </div>
-        <div className="item">Dormir paisiblement</div>
-        <div className="item">trouver la clarté</div>
+        <div className="item">
+          Dormir paisiblement{" "}
+          <span>
+            {" "}
+            <HttpsIcon
+              sx={{
+                position: "absolute",
+                top: "-34px",
+                right: "36px",
+                color: "#11d111d1",
+              }}
+            />
+          </span>
+        </div>
+        <div className="item">
+          trouver la clarté{" "}
+          <span>
+            {" "}
+            <HttpsIcon
+              sx={{
+                position: "absolute",
+                top: "-35px",
+                right: "51px",
+                color: "#11d111d1",
+              }}
+              className="ico"
+            />
+          </span>{" "}
+        </div>
       </Carousel>
     </div>
   );

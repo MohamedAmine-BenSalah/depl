@@ -18,6 +18,8 @@ const initialState = {
   secondScene: false,
   setVideo: false,
   isFullScreen: false,
+  
+
 };
 
 const pageReducer = (state = initialState, action) => {
