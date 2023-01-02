@@ -39,8 +39,9 @@ function Video() {
       <source
         src={
           isFirstScene
-            ? stress
-            : "https://static.happify.com/static/img/meditation/content/video/level1canoe_loop.mp4?1672569015543"
+            ? 
+             "https://static.happify.com/static/img/meditation/content/video/level1canoe_loop.mp4?1672569015543":
+          stress
         }
         type="video/mp4"
       />
