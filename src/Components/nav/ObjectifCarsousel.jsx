@@ -37,7 +37,7 @@ const ObjectifCarsousel = () => {
           }}
           className={clicked ? "item_click" : "item"}
         >
-          Détendez vous
+         Gestion du stress
         </div>
         <div
           onClick={() => {
