@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import stress from "../Components/nav/sceneImages/stress.mp4";
 
 function Video() {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ function Video() {
       <source
         src={
           isFirstScene
-            ? "https://static.happify.com/static/img/meditation/content/video/jamaica_loop.mp4?1672568954906"
+            ? stress
             : "https://static.happify.com/static/img/meditation/content/video/level1canoe_loop.mp4?1672569015543"
         }
         type="video/mp4"
